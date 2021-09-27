@@ -1,32 +1,53 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+<div>
+  <div class="mainContent">
+    <div class="mainNav">
+      <h1 id="brand">KAI CHEONG LU</h1>
+      <router-link :to="{ name: 'home' }" class="link">Home</router-link>
+      <router-link :to="{ name: 'about' }" class="link">About</router-link>
+      <router-link :to="{ name: 'contact'}" class="link">Contact</router-link>
     </div>
-    <router-view/>
   </div>
+  <router-view id="routerView" />
+</div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+
+</script>
+
+
+<style scoped>
+div.mainContent{
+  padding: 20px;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+div{
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.mainNav{
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.link{
+  flex-direction: column;
+  padding: 10px;
+  /* display: none; */
+}
+h1#brand{
+  display: flex;
+  /* flex-shrink: 1;
+  flex-grow: 1; */
+  /* border: 1px solid red; */
+  justify-content: center;
+  width: 60%;
+}
+#routerView{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 1px solid red; */
+  padding: 2px;
+  margin: 0 auto;
 }
 </style>
