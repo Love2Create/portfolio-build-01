@@ -23,6 +23,7 @@ div.mainContent{
 }
 div{
     font-family: Arial, Helvetica, sans-serif;
+
 }
 div.mainNav{
   flex-direction: row;
@@ -38,7 +39,7 @@ h1#brand{
   display: flex;
   /* flex-shrink: 1;
   flex-grow: 1; */
-  /* border: 1px solid red; */
+  border: 1px solid red;
   justify-content: center;
   width: 60%;
 }
@@ -46,7 +47,7 @@ h1#brand{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   padding: 2px;
   margin: 0 auto;
 }
